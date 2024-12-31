@@ -1,0 +1,30 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+            backgroundImage: {
+              'hero': "url('../../public/image/Slice 1.png')",
+              'facts': "url('../../public/image/Rectangle 2.png')",
+            },
+            colors: {
+              gradientStart: '#296099', // Warna awal
+              gradientMid: '#A3C6CC',   // Warna tengah
+              gradientEnd: '#71B9C5',   // Warna akhir
+            },
+        },
+    },
+
+    plugins: [forms],
+};
